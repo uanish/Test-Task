@@ -9,6 +9,7 @@ from alembic import context
 from src.config import get_settings
 import asyncio
 from sqlalchemy.ext.asyncio import create_async_engine
+
 config = context.config
 fileConfig(config.config_file_name)
 target_metadata = Base.metadata

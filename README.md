@@ -7,3 +7,5 @@
     - **docker-compose exec app poetry run alembic revision --autogenerate -m "Create Tables"**
     - **docker-compose exec app poetry run alembic upgrade head**
 4. Сайт будет доступен по адресу: **http://localhost:8000**
+
+5. Для запуска тестов: после действий выше выполнить: **docker-compose run --rm tests**
