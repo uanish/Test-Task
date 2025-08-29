@@ -38,5 +38,16 @@ services:
       test_task_postgres:
         condition: service_healthy
 
+  
+  tests:
+    build: .
+    command: poetry run pytest -v
+    volumes:
+      - ./src:/app/src
+      - ./migrations:/app/migrations
+    depends_on:
+      test_task_postgres:
+        condition: service_healthy
+
 volumes:
   postgres_data:
